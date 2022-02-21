@@ -30,8 +30,12 @@ mat-sidenav {
 
 mat-sidenav-container {
     height: calc(100vh - 65px);
+    margin:0px;
 }
 
+router-outlet {
+    margin:0px;
+}
 .menu-button {
     width: 100%;
     display: flex;

@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule} from '@angular/material/dialog';
 
 
 import { HomeComponent } from './components/home/home.component';
@@ -18,6 +19,7 @@ import { RolesComponent } from './components/roles/roles.component';
 import { EventsComponent } from './components/events/events.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { OppDetailComponent } from './components/opp-detail/opp-detail.component';
+import { DialogExampleComponent } from './components/dialog-example/dialog-example.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { OppDetailComponent } from './components/opp-detail/opp-detail.component
     EventsComponent,
     CalendarComponent,
     OppDetailComponent,
+    DialogExampleComponent,
   ],
+  entryComponents: [DialogExampleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,7 +43,7 @@ import { OppDetailComponent } from './components/opp-detail/opp-detail.component
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

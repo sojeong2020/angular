@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogExampleComponent } from '../dialog-example/dialog-example.component';
 
 
 @Component({
@@ -8,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( public dialog: MatDialog) { }
+
+  openDialog() {
+    this.dialog.open(DialogExampleComponent);
+  }
 
   ngOnInit(): void {
   }
