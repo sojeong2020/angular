@@ -52,22 +52,12 @@ mat-sidenav-container {
     border-radius: 50%;
 }
 
-.name {
-    margin-top: 8px;
-    font-weight: normal;
-}
-
-.designation {
-    margin-top: 2px;
-    font-size: 0.7rem;
-    color: lightgrey;
-}
-
 mat-divider {
     margin-top: 16px;
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, 0.5);
 }
+
 .example-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
