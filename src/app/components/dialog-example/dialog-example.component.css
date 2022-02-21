@@ -1,0 +1,15 @@
+.dialog {
+    margin:0%;
+}
+.email {
+    margin-bottom: 10%;
+}
+.sign {
+    margin-top: 10%;
+    padding:5%;
+    background-color: blueviolet;
+}
+.action {
+    background-color: bisque;
+    
+}
