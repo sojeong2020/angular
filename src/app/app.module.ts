@@ -9,7 +9,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
 
 
 import { HomeComponent } from './components/home/home.component';
@@ -40,7 +39,6 @@ import { OppDetailComponent } from './components/opp-detail/opp-detail.component
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    MatListModule
     
   ],
   providers: [],

@@ -40,9 +40,10 @@ mat-sidenav-container {
     font-size: 1rem;
 }
 
-    mat-icon {
-        margin-right: 8px;
-    }
+mat-icon {
+    margin-right: 8px;
+    color:rgb(204, 233, 233);
+}
 
 
 .avatar {

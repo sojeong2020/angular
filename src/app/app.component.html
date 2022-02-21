@@ -20,12 +20,11 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
        
-        <mat-nav-list>
         <img class="avatar mat-elevation-z8" src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" />
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-           <a mat-list-item routerLink="/home" >
+           <a routerLink="/home" >
             <mat-icon>home</mat-icon>
            </a>
             <span>Home</span>
@@ -33,7 +32,7 @@
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-            <a  mat-list-item routerLink="/profile">
+            <a routerLink="/profile">
             <mat-icon>person</mat-icon>
             </a>
             <span>Profile</span>
@@ -41,7 +40,7 @@
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-            <a  mat-list-item routerLink="opps">
+            <a  routerLink="opps">
             <mat-icon>view_list</mat-icon>
             </a>
             <span>Opportunities</span>
@@ -49,7 +48,7 @@
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-            <a  mat-list-item routerLink="roles">
+            <a  routerLink="roles">
             <mat-icon>info</mat-icon>
             </a> 
             <span>Roles</span>
@@ -57,7 +56,7 @@
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-            <a  mat-list-item routerLink="events">
+            <a  routerLink="events">
             <mat-icon>events</mat-icon>
             </a>
             <span>Events</span>
@@ -65,12 +64,11 @@
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-            <a  mat-list-item routerLink="calendar">
+            <a  routerLink="calendar">
             <mat-icon>date_range</mat-icon>
             </a>
             <span>Calendar</span>
         </button>
-    </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
