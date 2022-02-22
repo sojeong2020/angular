@@ -19,8 +19,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
-
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { HomeComponent } from './components/home/home.component';
@@ -66,7 +65,8 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     MatDatepickerModule,
     MatGridListModule,
     MatCardModule,
-    MatRadioModule
+    MatRadioModule,
+    FlexLayoutModule
     
   ],
   providers: [],

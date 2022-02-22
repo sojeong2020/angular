@@ -21,10 +21,7 @@ mat-sidenav {
     margin: 16px;
     margin-left: 32px;
 
-   /* display: flex; */
-    justify-content: center;
-    align-items:center;
-
+    
     font-size: 2rem;
     color: rgb(12, 0, 0);
 }

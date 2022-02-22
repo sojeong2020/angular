@@ -12,4 +12,8 @@ export class FormFieldComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveForm(){
+    console.log('Form data!');
+  }
+
 }
