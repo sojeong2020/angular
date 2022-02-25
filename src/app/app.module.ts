@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+import interactionPlugin from '@fullcalendar/interaction';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +28,6 @@ import {MatCardModule} from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OppsComponent } from './components/opps/opps.component';
@@ -31,6 +37,13 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { OppDetailComponent } from './components/opp-detail/opp-detail.component';
 import { DialogExampleComponent } from './components/dialog-example/dialog-example.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
+
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  timeGridPlugin,
+  listPlugin,
+  interactionPlugin
+])
 
 @NgModule({
   declarations: [
@@ -66,8 +79,9 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     MatGridListModule,
     MatCardModule,
     MatRadioModule,
-    FlexLayoutModule
-    
+    FlexLayoutModule,
+    FullCalendarModule // register FullCalendar with you app
+
   ],
   providers: [],
   bootstrap: [AppComponent]

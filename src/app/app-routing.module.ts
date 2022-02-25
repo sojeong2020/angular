@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'roles' , component: RolesComponent},
   { path: 'events' , component: EventsComponent},
   { path: 'calendar' , component: CalendarComponent},
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }
 
 ];
 
