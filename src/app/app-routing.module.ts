@@ -13,8 +13,8 @@ const routes: Routes = [
   
   { path: 'home' , component: HomeComponent},
   { path: 'profile' , component: ProfileComponent},
-  { path: 'opps' , component: OppsComponent},
   { path: 'oppDetail/:id' , component: OppDetailComponent},
+  { path: 'opps' , component: OppsComponent},
   { path: 'roles' , component: RolesComponent},
   { path: 'events' , component: EventsComponent},
   { path: 'calendar' , component: CalendarComponent},

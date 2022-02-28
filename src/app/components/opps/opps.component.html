@@ -1,10 +1,12 @@
 <mat-card class="mat-elevation-z4">
+    <h2>List of Opportunities</h2>
 <ul class="opps">
     <li *ngFor ="let opp of opps">
+        <a routerLink="/oppDetail/{{opp.id}}">
         <span class="badge">{{opp.id}}</span>
         <span class="name">{{opp.name}}</span>
-        <button [class.selected]="opp === selectedOpp" type="button" (click)="onSelect(opp)">click</button>    </li>
+    </a>
+    </li>
+        
 </ul>
-
-<app-opp-detail [opp]="selectedOpp"></app-opp-detail>
 </mat-card>

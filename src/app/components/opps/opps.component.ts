@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Opp} from '../../opp';
-import { OPPS } from 'src/app/mock-opps';
+import {OppService} from '../../opp.service';
 
 @Component({
   selector: 'app-opps',
@@ -9,17 +9,21 @@ import { OPPS } from 'src/app/mock-opps';
 })
 export class OppsComponent implements OnInit {
 
-  opps = OPPS;  // define a component property called opps to expose OPPS array for binding
-
+  opps: Opp[] = [];
   selectedOpp?: Opp; //Rename the component's opp property to selectedOpp but don't assign it. There is no selected opp when the application starts.
 
   onSelect(opp: Opp): void {
     this.selectedOpp = opp;
   } // onSelect() method, which assigns the clicked opp from the template to the component's selectedOpp.
 
-  constructor() { }
+  constructor(private oppService: OppService) { }
+
+  getOpps():void {
+    this.oppService.getOpps().subscribe(opps => this.opps = opps);
+  }
 
   ngOnInit(): void {
+    this.getOpps()
   }
 
 }
