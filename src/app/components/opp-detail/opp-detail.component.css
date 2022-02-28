@@ -1,0 +1,27 @@
+label {
+    color: #435960;
+    font-weight: bold;
+  }
+  input {
+    font-size: 1em;
+    padding: 0.3rem;
+  }
+  button {
+    margin-top: 20px;
+    margin-right: .5rem;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #0b87bd;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: rgb(84, 86, 88);
+    cursor: auto;
+  }
+  .opp-form {
+      margin-bottom: 10px;
+  }

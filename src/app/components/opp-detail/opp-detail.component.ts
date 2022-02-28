@@ -22,6 +22,7 @@ export class OppDetailComponent implements OnInit {
     
     private location: Location       //The location is an Angular service for interacting with the browser.
    ) { }
+   //Inject the ActivatedRoute, OppService, and Location services into the constructor, saving their values in private fields:
 
 
   ngOnInit(): void {
@@ -32,6 +33,16 @@ export class OppDetailComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.oppService.getOpp(id)
     .subscribe(opp => this.opp = opp);
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+  save(): void {
+    if(this.opp) {
+      console.log('update!')
+    }
   }
 
 }
