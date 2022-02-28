@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'home' , component: HomeComponent},
   { path: 'profile' , component: ProfileComponent},
   { path: 'opps' , component: OppsComponent},
-  { path: 'oppDetail' , component: OppDetailComponent},
+  { path: 'oppDetail/:id' , component: OppDetailComponent},
   { path: 'roles' , component: RolesComponent},
   { path: 'events' , component: EventsComponent},
   { path: 'calendar' , component: CalendarComponent},

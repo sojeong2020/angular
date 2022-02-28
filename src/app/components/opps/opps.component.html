@@ -1,1 +1,10 @@
-<p>opps works!</p>
+<mat-card class="mat-elevation-z4">
+<ul class="opps">
+    <li *ngFor ="let opp of opps">
+        <span class="badge">{{opp.id}}</span>
+        <span class="name">{{opp.name}}</span>
+        <button [class.selected]="opp === selectedOpp" type="button" (click)="onSelect(opp)">click</button>    </li>
+</ul>
+
+<app-opp-detail [opp]="selectedOpp"></app-opp-detail>
+</mat-card>
