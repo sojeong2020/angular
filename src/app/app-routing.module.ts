@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OppsComponent } from './components/opps/opps.component';
 import { RolesComponent } from './components/roles/roles.component';
@@ -11,7 +10,7 @@ import { OppDetailComponent } from './components/opp-detail/opp-detail.component
 
 const routes: Routes = [
   
-  { path: 'home' , component: HomeComponent},
+  { path: 'home' , loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)},
   { path: 'profile' , component: ProfileComponent},
   { path: 'oppDetail/:id' , component: OppDetailComponent},
   { path: 'opps' , component: OppsComponent},

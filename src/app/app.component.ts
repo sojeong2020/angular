@@ -3,6 +3,11 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
 
+import{ locale as englishLang} from '../assets/i18n/en';
+import{ locale as welshLang} from '../assets/i18n/en';
+import { TranslationService } from './translation.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -14,7 +19,13 @@ import { delay } from 'rxjs/operators';
 export class AppComponent {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver) {}
+  currentLang: string ='en';
+  
+  constructor(private observer: BreakpointObserver,
+              private translationService:TranslationService
+  ) {
+    this.translationService.addTranslation(englishLang,welshLang)
+  }
 
   ngAfterViewInit() {
     this.observer
@@ -30,4 +41,21 @@ export class AppComponent {
         }
       });
   }
+
+  ngOnInit(){
+    this.currentLang = this.translationService.getCurrentLang();
+  }
+
+  onLangChange(currentLang:string){
+    this.translationService.useLang(currentLang);
+    console.log(currentLang,"currentLANG!!!")
+
+  }
+
+  languages=[
+    {name:'English',lang:'en'},
+    {name:'Welsh',lang:'we'},
+  ]
+
+ 
 }

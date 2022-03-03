@@ -1,5 +1,3 @@
-
-
 <mat-toolbar class="mat-elevation-z8">
     <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
         <mat-icon *ngIf="!sidenav.opened">
@@ -11,10 +9,12 @@
     </button>
     <span>My App</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="language icon-button with language icon">
-      <mat-icon>language</mat-icon>
-    </button>
-    
+    <mat-icon>language</mat-icon>
+
+    <select name='langChoose' #langChoose [(ngModel)]='currentLang' class="form-select form-select-sm" (change)="onLangChange(langChoose.value)">
+        <option *ngFor="let lang of languages" value="{{lang.lang}}">{{lang.name}}</option>
+    </select>
+
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -24,10 +24,10 @@
         <mat-divider></mat-divider>
 
         <button mat-button class="menu-button">
-           <a routerLink="/home" role=link>
+           <a routerLink="home" role=link>
             <mat-icon>home</mat-icon>
            </a>
-            <span>Home</span>
+            <span>{{'MENU.HOME' | translate}}</span>
         </button>
         <mat-divider></mat-divider>
 
@@ -35,7 +35,7 @@
             <a routerLink="/profile" role=link>
             <mat-icon>person</mat-icon>
             </a>
-            <span>Profile</span>
+            <span>{{'MENU.PROFILE' | translate}}</span>
         </button>
         <mat-divider></mat-divider>
 
@@ -43,7 +43,7 @@
             <a  routerLink="opps" role=link>
             <mat-icon>view_list</mat-icon>
             </a>
-            <span>Opportunities</span>
+            <span>{{'MENU.OPPORTUNITIES' | translate}}</span>
         </button>
         <mat-divider></mat-divider>
 
@@ -51,7 +51,7 @@
             <a  routerLink="roles" role=link>
             <mat-icon>info</mat-icon>
             </a> 
-            <span>Roles</span>
+            <span>{{'MENU.ROLES' | translate}}</span>
         </button>
         <mat-divider></mat-divider>
 
@@ -59,7 +59,7 @@
             <a  routerLink="events" role=link>
             <mat-icon>events</mat-icon>
             </a>
-            <span>Events</span>
+            <span>{{'MENU.EVENTS' | translate}}</span>
         </button>
         <mat-divider></mat-divider>
 
@@ -67,7 +67,7 @@
             <a  routerLink="calendar" role=link>
             <mat-icon>date_range</mat-icon>
             </a>
-            <span>Calendar</span>
+            <span>{{'MENU.CALENDAR' | translate}}</span>
         </button>
     </mat-sidenav>
 

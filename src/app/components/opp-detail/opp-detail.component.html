@@ -4,12 +4,12 @@
     <h1>{{opp.name |uppercase}}</h1>
         <div class="opp-form">
         <label for="opp-name">Opportunity Name: </label>
-        <input id="opp-name" [(ngModel)]="opp.name" placeholder="name"> 
+        <input id="opp-name" [(ngModel)]="opp.name" placeholder="name" required> 
         </div>
 
         <div class="opp-form">
         <label for="opp-description">Opportunity Description: </label>
-        <input id="opp-description" [(ngModel)]="opp.description" placeholder="description"> 
+        <input id="opp-description" [(ngModel)]="opp.description" placeholder="description"  required> 
         </div>
     <button type="button" (click)="goBack()">BACK</button>
 

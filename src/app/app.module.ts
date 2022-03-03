@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+
+//import ngx-translate and the http loader
+import { TranslateModule , TranslateLoader} from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -8,7 +14,6 @@ import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,7 +33,6 @@ import {MatCardModule} from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OppsComponent } from './components/opps/opps.component';
 import { RolesComponent } from './components/roles/roles.component';
@@ -37,6 +41,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { OppDetailComponent } from './components/opp-detail/opp-detail.component';
 import { DialogExampleComponent } from './components/dialog-example/dialog-example.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -48,20 +53,31 @@ FullCalendarModule.registerPlugins([
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ProfileComponent,
     OppsComponent,
-    RolesComponent,
+    RolesComponent, 
     EventsComponent,
     CalendarComponent,
     OppDetailComponent,
     DialogExampleComponent,
     FormFieldComponent,
+    ToolbarComponent,
   ],
   entryComponents: [DialogExampleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    //configure the imports
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
+    
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -87,3 +103,8 @@ FullCalendarModule.registerPlugins([
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//required for AOT(Ahead of Time) compilation
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
