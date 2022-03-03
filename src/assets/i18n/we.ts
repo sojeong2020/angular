@@ -2,6 +2,7 @@ export const locale = {
     lang:'we',
     data:{
         MENU:{
+            LOGO:"Fy Ap",
             HOME:"Cartref",
             PROFILE:"Proffil",
             OPPORTUNITIES:"Cyfleoedd",

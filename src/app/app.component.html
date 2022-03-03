@@ -7,11 +7,11 @@
             close
         </mat-icon>
     </button>
-    <span>My App</span>
+    <span>{{'MENU.LOGO' | translate}}</span>
     <span class="example-spacer"></span>
     <mat-icon>language</mat-icon>
 
-    <select name='langChoose' #langChoose [(ngModel)]='currentLang' class="form-select form-select-sm" (change)="onLangChange(langChoose.value)">
+    <select name='langChoose' #langChoose [(ngModel)]='currentLang' class="form-select" (change)="onLangChange(langChoose.value)">
         <option *ngFor="let lang of languages" value="{{lang.lang}}">{{lang.name}}</option>
     </select>
 

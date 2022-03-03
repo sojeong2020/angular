@@ -4,7 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
 
 import{ locale as englishLang} from '../assets/i18n/en';
-import{ locale as welshLang} from '../assets/i18n/en';
+import{ locale as welshLang} from '../assets/i18n/we';
 import { TranslationService } from './translation.service';
 
 

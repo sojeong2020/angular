@@ -33,7 +33,6 @@ import {MatCardModule} from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { ProfileComponent } from './components/profile/profile.component';
 import { OppsComponent } from './components/opps/opps.component';
 import { RolesComponent } from './components/roles/roles.component';
 import { EventsComponent } from './components/events/events.component';
@@ -53,7 +52,6 @@ FullCalendarModule.registerPlugins([
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
     OppsComponent,
     RolesComponent, 
     EventsComponent,
@@ -68,7 +66,7 @@ FullCalendarModule.registerPlugins([
     BrowserModule,
     AppRoutingModule,
 
-    //configure the imports
+    //configure the imports, ngx-translate and the loader module
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

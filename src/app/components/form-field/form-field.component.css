@@ -1,5 +1,5 @@
  .form {
-  height: calc(100vh - 98px);
+  height: 100vh;
   border-radius: 10px;
   margin: 16px;
   margin-left: 32px;
@@ -16,6 +16,8 @@
   mat-card-actions {
     margin-left: 80%;
   }
+
+  
   .save-button {
     background-color: green;
   }

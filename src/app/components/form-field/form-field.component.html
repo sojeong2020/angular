@@ -1,52 +1,41 @@
     <form>
       <mat-card>
         <mat-card-header>
-          <mat-card-title>Personal details</mat-card-title>
+          <mat-card-title>{{'FORM.TITLE' | translate}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-    <h4>Name</h4>
+    <h4>{{'FORM.NAME' | translate}}</h4>
     <mat-form-field class="form-field" appearance="fill">
       <input matInput placeholder="Sojeong">
     </mat-form-field>
 
-  <h4>Surname</h4>
+  <h4>{{'FORM.SURNAME' | translate}}</h4>
     <mat-form-field class="form-field" appearance="fill">
         <input matInput placeholder="Park">
       </mat-form-field>
 
-    <h4>Your mobile number</h4>
+    <h4>{{'FORM.MOBILE' | translate}}</h4>
     <mat-form-field class="form-field" appearance="fill">
         <input matInput placeholder="7675553333" >
     </mat-form-field>
 
-    <h4>Your email address</h4>
+    <h4>{{'FORM.EMAIL' | translate}}</h4>
    <mat-form-field class="form-field" appearance="fill">
         <input matInput placeholder="teamkinetic@gmail.com">
     </mat-form-field>
 
-    <h4>Your date of birth</h4>
+    <h4>{{'FORM.BIRTH' | translate}}</h4>
     <mat-form-field class="form-field" appearance="fill">
         <input matInput [matDatepicker]="picker"  placeholder="02/02/2000">
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
    
-      <button mat-raised-button (click)="picker.open()">Open</button>
+      <button mat-raised-button (click)="picker.open()">{{'FORM.OPEN' | translate}}</button>
 
-     <mat-grid-tile>
-    <h4>You identify your gender as</h4>
-    <mat-form-field appearance="fill">
-    <select matNativeControl required>
-    <option value="Female">Female</option>
-    <option value="male">Male</option>
-    <option value="Transfemale">Trans female</option>
-    <option value="Transmale">Trans male</option>
-    </select>
-    </mat-form-field>
-  </mat-grid-tile>
-</mat-card-content>
+  </mat-card-content>
 
   <mat-card-actions>
-    <button class="save-button" mat-raised-button  (click)="saveForm()">save</button>
+    <button class="save-button" mat-raised-button  (click)="saveForm()">{{'FORM.SAVE' | translate}}</button>
   </mat-card-actions>
   </mat-card>
   </form>
