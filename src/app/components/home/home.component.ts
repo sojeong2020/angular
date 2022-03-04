@@ -15,7 +15,7 @@ import { TranslationService } from 'src/app/translation.service';
 export class HomeComponent implements OnInit {
 
   constructor( public dialog: MatDialog,
-               private translationService:TranslationService) { 
+               private translationService: TranslationService) { 
                  
       this.translationService.addTranslation(englishLang,welshLang)
 

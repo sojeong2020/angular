@@ -4,6 +4,10 @@ import { Location } from '@angular/common';
 import {OppService} from '../../opp.service';
 import {Opp} from '../../opp';
 
+import { locale as englishLang } from './i18n/en';
+import { locale as welshLang } from './i18n/we';
+import { TranslationService } from 'src/app/translation.service';
+
 @Component({
   selector: 'app-opp-detail',
   templateUrl: './opp-detail.component.html',
@@ -20,8 +24,12 @@ export class OppDetailComponent implements OnInit {
 
     private oppService: OppService,  //The OppService gets opp data from the remote server and this component will use it to get the opp-to-display.
     
-    private location: Location       //The location is an Angular service for interacting with the browser.
-   ) { }
+    private location: Location, //The location is an Angular service for interacting with the browser.
+
+    private translationService: TranslationService) {
+      
+    this.translationService.addTranslation(englishLang, welshLang)
+    }
    //Inject the ActivatedRoute, OppService, and Location services into the constructor, saving their values in private fields:
 
 

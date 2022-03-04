@@ -11,12 +11,12 @@ const routes: Routes = [
   
   { path: 'home' , loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)},
   { path: 'profile' , loadChildren: () => import('./components/form-field/form-field.module').then(m => m.FormFieldModule)},
+  { path: 'roles' , component: RolesComponent},
+
   { path: 'events' ,component: EventsComponent},
   { path: 'oppDetail/:id' , component: OppDetailComponent},
   { path: 'opps' , component: OppsComponent},
-  { path: 'roles' , component: RolesComponent},
- 
-  { path: 'calendar' , component: CalendarComponent},
+ { path: 'calendar' , component: CalendarComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' }
 
 ];

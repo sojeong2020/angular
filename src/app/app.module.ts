@@ -40,7 +40,6 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { OppDetailComponent } from './components/opp-detail/opp-detail.component';
 import { DialogExampleComponent } from './components/dialog-example/dialog-example.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -59,7 +58,6 @@ FullCalendarModule.registerPlugins([
     OppDetailComponent,
     DialogExampleComponent,
     FormFieldComponent,
-    ToolbarComponent,
   ],
   entryComponents: [DialogExampleComponent],
   imports: [
