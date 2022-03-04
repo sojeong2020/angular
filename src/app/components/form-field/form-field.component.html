@@ -1,41 +1,65 @@
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="submitData()" >
       <mat-card>
         <mat-card-header>
           <mat-card-title>{{'FORM.TITLE' | translate}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-    <h4>{{'FORM.NAME' | translate}}</h4>
+          
+    <label>{{'FORM.NAME' | translate}}</label>
     <mat-form-field class="form-field" appearance="fill">
-      <input matInput placeholder="Sojeong">
+      <input matInput type="text" formControlName="firstname"  placeholder="First Name">
     </mat-form-field>
-
-  <h4>{{'FORM.SURNAME' | translate}}</h4>
+    <!-- display error start-->
+    <div *ngIf="firstname.invalid && (firstname.touched || firstname.dirty)">
+      <span class="error" *ngIf="firstname.errors?.required"> *First Name Required.</span>
+      <span class="error" *ngIf="firstname.errors?.pattern"> *Enter only characters.</span>
+    </div> 
+  
+  
+      <label>{{'FORM.SURNAME' | translate}}</label>
     <mat-form-field class="form-field" appearance="fill">
-        <input matInput placeholder="Park">
+        <input matInput formControlName="surname"  placeholder="Surname">
       </mat-form-field>
+    <!-- display error start-->
+    <div *ngIf="surname.invalid && (surname.touched || surname.dirty)">
+      <span class="error" *ngIf="surname.errors?.required"> *Surname  Required.</span>
+      <span class="error" *ngIf="surname.errors?.pattern"> *Enter only characters.</span>
+    </div> 
 
-    <h4>{{'FORM.MOBILE' | translate}}</h4>
+    <label>{{'FORM.MOBILE' | translate}}</label>
     <mat-form-field class="form-field" appearance="fill">
-        <input matInput placeholder="7675553333" >
+        <input matInput formControlName="mobile" placeholder="Mobile Number" >
     </mat-form-field>
+    <!-- display error start-->
+    <div *ngIf="mobile.invalid && (mobile.touched || mobile.dirty)">
+      <span class="error" *ngIf="mobile.errors?.required"> *Mobile number Required.</span>
+      <span class="error" *ngIf="mobile.errors?.pattern"> *Enter valid number.</span>
+    </div> 
 
-    <h4>{{'FORM.EMAIL' | translate}}</h4>
+
+    <label>{{'FORM.EMAIL' | translate}}</label>
    <mat-form-field class="form-field" appearance="fill">
-        <input matInput placeholder="teamkinetic@gmail.com">
+        <input matInput formControlName="email" placeholder="Email address">
     </mat-form-field>
+    <!-- display error start-->
+    <div *ngIf="email.invalid && (email.touched || email.dirty)">
+      <span class="error" *ngIf="email.errors?.required"> *Email address Required.</span>
+      <span class="error" *ngIf="email.errors?.email"> *Enter valid email address.</span>
+    </div> 
 
-    <h4>{{'FORM.BIRTH' | translate}}</h4>
+       <!-- error ,, [matDatepicker] doesn't have formGoup -->
+    <!--   <label>{{'FORM.BIRTH' | translate}}</label>
     <mat-form-field class="form-field" appearance="fill">
-        <input matInput [matDatepicker]="picker"  placeholder="02/02/2000">
+        <input matInput [matDatepicker]="picker" formControlName=[matDatepicker] placeholder="02/02/2000">
         <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-   
-      <button mat-raised-button (click)="picker.open()">{{'FORM.OPEN' | translate}}</button>
+      </mat-form-field> 
+    
+   <button mat-raised-button (click)="picker.open()">{{'FORM.OPEN' | translate}}</button>   -->
 
   </mat-card-content>
 
   <mat-card-actions>
-    <button class="save-button" mat-raised-button  (click)="saveForm()">{{'FORM.SAVE' | translate}}</button>
+    <button class="save-button" mat-raised-button [disabled]="registerForm.invalid" >{{'FORM.SUBMIT' | translate}}</button>
   </mat-card-actions>
   </mat-card>
   </form>

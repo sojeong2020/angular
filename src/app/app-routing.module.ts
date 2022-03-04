@@ -6,17 +6,17 @@ import { RolesComponent } from './components/roles/roles.component';
 import { EventsComponent } from './components/events/events.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { OppDetailComponent } from './components/opp-detail/opp-detail.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
 
 const routes: Routes = [
   
   { path: 'home' , loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)},
-  { path: 'profile' , loadChildren: () => import('./components/form-field/form-field.module').then(m => m.FormFieldModule)},
+  { path: 'profile', component: FormFieldComponent},
   { path: 'roles' , component: RolesComponent},
-
   { path: 'events' ,component: EventsComponent},
   { path: 'oppDetail/:id' , component: OppDetailComponent},
   { path: 'opps' , component: OppsComponent},
- { path: 'calendar' , component: CalendarComponent},
+  { path: 'calendar' , component: CalendarComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' }
 
 ];

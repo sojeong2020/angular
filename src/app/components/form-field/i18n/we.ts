@@ -10,7 +10,7 @@ export const locale = {
             EMAIL: "Eich cyfeiriad e-bost",
             BIRTH: "Eich dyddiad geni",
             OPEN:"Agor",
-            SAVE:"achub"
+            SUBMIT:"achub"
 
         }
        

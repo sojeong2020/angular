@@ -16,7 +16,9 @@
   mat-card-actions {
     margin-left: 80%;
   }
-
+ .error {
+   color:red;
+ }
   
   .save-button {
     background-color: green;

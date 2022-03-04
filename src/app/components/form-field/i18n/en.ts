@@ -10,7 +10,7 @@ export const locale = {
             EMAIL: "Your email address",
             BIRTH: "Your date of birth",
             OPEN:"Open",
-            SAVE:"save"
+            SUBMIT:"Submit"
 
         }
         
