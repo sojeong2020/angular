@@ -33,7 +33,7 @@
     <!-- display error start-->
     <div *ngIf="mobile.invalid && (mobile.touched || mobile.dirty)">
       <span class="error" *ngIf="mobile.errors?.required"> *Mobile number Required.</span>
-      <span class="error" *ngIf="mobile.errors?.pattern"> *Enter valid number.</span>
+      <span class="error" *ngIf="mobile.errors?.pattern"> *Enter only number.</span>
     </div> 
 
 
@@ -59,7 +59,7 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button class="save-button" mat-raised-button [disabled]="registerForm.invalid" >{{'FORM.SUBMIT' | translate}}</button>
+    <button aria-label="Save profile" class="save-button" mat-raised-button [disabled]="registerForm.invalid" >{{'FORM.SUBMIT' | translate}}</button>
   </mat-card-actions>
   </mat-card>
   </form>

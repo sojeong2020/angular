@@ -32,7 +32,6 @@ export class FormFieldComponent {
   
  submitData(){
     console.log(this.registerForm.value,"this.registerForm.value");
-    console.log(this.registerForm.value.firstname,"this.registerForm.value.firstname");
 
     if(this.registerForm.valid.firstname)
     window.alert(`Thank You ${this.registerForm.value.firstname}`);
